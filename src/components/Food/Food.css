@@ -1,0 +1,68 @@
+.food {
+  margin: 80px auto;
+  width: 90%;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.gallery img {
+  width: 23%;
+  max-width: 200px; /* Limit maximum width of images */
+  margin-bottom: 20px; /* Add space between images */
+  border-radius: 10%;
+}
+
+.btn {
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px; /* Add margin between buttons */
+  padding: 10px 20px; /* Adjust padding for buttons */
+}
+
+.btn img {
+  width: 30px;
+  margin-right: 10px; /* Adjust spacing between icon and text */
+}
+
+.btn.dark-btn {
+  background: #156305;
+  color: #fff;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .gallery img {
+    width: 45%; /* Two images per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery img {
+    width: 100%; /* Full width images on small screens */
+    max-width: none; /* Remove maximum width on small screens */
+  }
+
+  .btn {
+    width: 100%; /* Full width buttons on small screens */
+    margin: 10px 0; /* Adjust margin for buttons */
+  }
+}

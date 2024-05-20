@@ -1,0 +1,80 @@
+.bests {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 50px auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.best {
+  flex-basis: 31%;
+  position: relative;
+  margin-bottom: 20px; /* Add some space between rows */
+}
+
+.best img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.caption {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(248, 250, 248, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  opacity: 0;
+  padding-top: 70%;
+  transition: 0.4s;
+}
+
+.caption img {
+  width: 60px;
+  margin-bottom: 0;
+}
+
+.best:hover .caption {
+  opacity: 1;
+  padding-top: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .best {
+    flex-basis: 45%; /* Two items per row on large screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .best {
+    flex-basis: 100%; /* One item per row on medium screens */
+  }
+
+  .bests {
+    margin: 20px auto; /* Reduce margin on smaller screens */
+  }
+
+  .best {
+    margin-bottom: 15px; /* Reduce space between rows */
+  }
+}
+
+@media (max-width: 480px) {
+  .caption img {
+    width: 50px; /* Smaller icon on small screens */
+  }
+
+  .caption {
+    padding-top: 60%; /* Adjust padding to fit smaller screens */
+  }
+}

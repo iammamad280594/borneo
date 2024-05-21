@@ -1,0 +1,54 @@
+/* AboutUsPage.css */
+.about-us {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.about-us h2 {
+  color: #016914;
+  margin-bottom: 10px;
+}
+
+.company-history, .team, .company-culture {
+  margin-bottom: 30px;
+}
+
+.company-history p, .company-culture p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-card .name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.team-card .title, .team-card .experience {
+  color: #555;
+}

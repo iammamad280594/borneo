@@ -1,13 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'; // Import PropTypes
-import './About.css'
-import about_img from '../../assets/about.webp'
-import play from '../../assets/play.png'
+import React from 'react';
+import PropTypes from 'prop-types';
+import './About.css';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import about_img from '../../assets/about.webp';
+import play from '../../assets/play.png';
 import { Helmet } from 'react-helmet';
-const About = ({setPlayState}) => {
+import white_arrow from '../../assets/white-arrow.png';
+
+const About = ({ setPlayState }) => {
   return (
-    
-      <div>
+    <div>
       <Helmet>
         <title>About Us | My Awesome Restaurant</title>
         <meta name="description" content="Learn more about our restaurant, our values, and our mission to provide the best service and food to our customers." />
@@ -56,27 +58,26 @@ const About = ({setPlayState}) => {
         <html lang="en" />
         <meta httpEquiv="Content-Language" content="en-US" />
       </Helmet>
-    <div className='about'>
-      <div className="about-left">
-      <img src={about_img} className='about-img' alt='video pelanggan' />
-      <img src={play} className='play' alt='video restaurant' onClick={()=> {
-        setPlayState(true)
-      }} />
-      </div>
-      
-      <div className="about-right">
-      <h3>ABOUT BORNEO</h3>
-      <h2> Our Vision is Introducing Indonesian Food</h2>
-      <p>We envision becoming Africa go-to destination for authentic Indonesian cuisine. Through our culinary excellence, we aim to connect continents, fostering a deeper appreciation for diversity and cultural exchange through the joy of shared meals. Join us as we celebrate the fusion of flavors and cultures, right here in Africa</p>
-      
-      </div>
+      <div className='about'>
+        <div className="about-left">
+          <img src={about_img} className='about-img' alt='video pelanggan' />
+          <img src={play} className='play' alt='video restaurant' onClick={() => {
+            setPlayState(true);
+          }} />
+        </div>
+        <div className="about-right">
+          <h3>ABOUT BORNEO</h3>
+          <h2> Our Vision is Introducing Indonesian Food</h2>
+          <p>We envision becoming Africa go-to destination for authentic Indonesian cuisine. Through our culinary excellence, we aim to connect continents, fostering a deeper appreciation for diversity and cultural exchange through the joy of shared meals. Join us as we celebrate the fusion of flavors and cultures, right here in Africa</p>
+          <Link to="/about" className='btn dark-btn'>About Us <img src={white_arrow} alt="" /></Link>
+        </div>
       </div>  
     </div>
-  )
+  );
 }
 
 About.propTypes = {
-  setPlayState: PropTypes.func.isRequired // Define prop types
+  setPlayState: PropTypes.func.isRequired
 };
 
-export default About
+export default About;

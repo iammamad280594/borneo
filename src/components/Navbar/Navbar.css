@@ -1,5 +1,5 @@
 nav {
-    /* background: #253932; */
+    background: #015107; 
     color: #fff;
     width: 100%;
     padding: 10px 0;
@@ -83,4 +83,9 @@ nav ul li{
 .hide-mobile-menu{
     right: -200px;
 }
+}
+
+ul li a:hover {
+    color: #007BFF; /* Change to your preferred hover color */
+    transform: scale(1.1);
 }

@@ -1,0 +1,32 @@
+/* TeamPages.css */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.user-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.user-card img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.user-card p {
+  margin: 5px 0;
+}
+
+.user-card p.email {
+  font-weight: bold;
+}
+
+.user-card p.phone {
+  color: #666;
+}

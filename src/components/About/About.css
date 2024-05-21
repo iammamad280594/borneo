@@ -16,6 +16,26 @@
 .about-right {
   flex-basis: 100%; /* Full width on smaller screens */
 }
+.btn.dark-btn {
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px; /* Add margin around the button */
+  padding: 10px 20px; /* Adjust padding for the button */
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  font-size: 1em; /* Adjust font size */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.btn.dark-btn:hover {
+  background-color: #555; /* Slightly lighter background color on hover */
+}
+
 
 .about-img {
   width: 100%;
